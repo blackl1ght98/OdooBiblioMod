@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_biblioteca,modulogfb.biblioteca.access,model_modulogfb_biblioteca,base.group_user,1,1,1,1
+access_autor,modulogfb.autor.access,model_modulogfb_autor,base.group_user,1,1,1,1
+access_libro,modulogfb.libro.access,model_modulogfb_libro,base.group_user,1,1,1,1

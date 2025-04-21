@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Acción de ventana para Biblioteca -->
+    <record id="action_biblioteca" model="ir.actions.act_window">
+        <field name="name">Bibliotecas</field>
+        <field name="res_model">modulogfb.biblioteca</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_biblioteca_tree"/>
+        <field name="views">[(ref('view_biblioteca_tree'), 'list'), (ref('view_biblioteca_form'), 'form')]</field>
+    </record>
+
+    <!-- Acción de ventana para Autor -->
+    <record id="action_autor" model="ir.actions.act_window">
+        <field name="name">Autores</field>
+        <field name="res_model">modulogfb.autor</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_autor_tree"/>
+        <field name="views">[(ref('view_autor_tree'), 'list'), (ref('view_autor_form'), 'form')]</field>
+    </record>
+
+    <!-- Acción de ventana para Libro -->
+    <record id="action_libro" model="ir.actions.act_window">
+        <field name="name">Libros</field>
+        <field name="res_model">modulogfb.libro</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_libro_tree"/>
+        <field name="views">[(ref('view_libro_tree'), 'list'), (ref('view_libro_form'), 'form')]</field>
+    </record>
+
+    <!-- Menú principal para el módulo -->
+    <menuitem id="menu_modulogfb_root" name="Biblioteca GFB" sequence="10"/>
+
+    <!-- Submenús para cada modelo -->
+    <menuitem id="menu_biblioteca" name="Bibliotecas" parent="menu_modulogfb_root" action="action_biblioteca" sequence="1"/>
+    <menuitem id="menu_autor" name="Autores" parent="menu_modulogfb_root" action="action_autor" sequence="2"/>
+    <menuitem id="menu_libro" name="Libros" parent="menu_modulogfb_root" action="action_libro" sequence="3"/>
+</odoo>

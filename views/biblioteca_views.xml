@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista árbol para Biblioteca -->
+    <record id="view_biblioteca_tree" model="ir.ui.view">
+        <field name="name">biblioteca.tree</field>
+        <field name="model">modulogfb.biblioteca</field>
+        <field name="arch" type="xml">
+            <list string="Bibliotecas">
+                <field name="name"/>
+                <field name="capacidad"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Vista formulario para Biblioteca -->
+    <record id="view_biblioteca_form" model="ir.ui.view">
+        <field name="name">biblioteca.form</field>
+        <field name="model">modulogfb.biblioteca</field>
+        <field name="arch" type="xml">
+            <form string="Biblioteca">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="capacidad"/>
+                    </group>
+                    <group>
+                        <field name="libro_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

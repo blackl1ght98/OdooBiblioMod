@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Datos para el modelo Biblioteca -->
+        <record id="biblioteca_1" model="modulogfb.biblioteca">
+            <field name="name">Biblioteca Central</field>
+            <field name="capacidad">100</field>
+        </record>
+        <record id="biblioteca_2" model="modulogfb.biblioteca">
+            <field name="name">Biblioteca Municipal</field>
+            <field name="capacidad">50</field>
+        </record>
+        <!-- Datos para el modelo Autor -->
+        <record id="autor_1" model="modulogfb.autor">
+            <field name="name">Gabriel García Márquez</field>
+            <field name="nacionalidad">Colombiana</field>
+        </record>
+        <record id="autor_2" model="modulogfb.autor">
+            <field name="name">Isabel Allende</field>
+            <field name="nacionalidad">Chilena</field>
+        </record>
+        <!-- Datos para el modelo Libro -->
+        <record id="libro_1" model="modulogfb.libro">
+            <field name="name">Cien Años de Soledad</field>
+            <field name="publicado">1967-05-30</field>
+            <field name="precio">29.99</field>
+            <field name="genero">novela</field>
+            <field name="biblioteca_id" ref="biblioteca_1"/>
+            <field name="autor_ids" eval="[(4, ref('autor_1'))]"/>
+        </record>
+        <record id="libro_2" model="modulogfb.libro">
+            <field name="name">La Casa de los Espíritus</field>
+            <field name="publicado">1982-08-01</field>
+            <field name="precio">24.99</field>
+            <field name="genero">novela</field>
+            <field name="biblioteca_id" ref="biblioteca_2"/>
+            <field name="autor_ids" eval="[(4, ref('autor_2'))]"/>
+        </record>
+    </data>
+</odoo>
