@@ -12,30 +12,30 @@ Este es un módulo personalizado para Odoo que gestiona una biblioteca. Incluye 
 
 ## Instalación
 1. Copia el módulo a la carpeta de addons de Odoo si usas ubuntu tienes que usar el comando si estas en ubuntu:
-   ´´´sh
+   ```bash
    sudo cp -r moduloGFB /lib/python3/dis-packages/odoo/addons
-   ´´´
+   ```
    si estas en windows seria ir a la ruta de instalacion de odoo y pegar en ese sitio la carpeta con los archivos del modulo.
 3. Actualiza la lista de aplicaciones en Odoo: **Aplicaciones > Actualizar lista de aplicaciones**.
 4. Busca `modulogfb` y haz clic en **Instalar**.
 ## Si el modulo ya lo tienes impotado y lo cambias
 Los pasos son:
 Ir a esta ruta en ubuntu
-´´´sh
+```bash
 cd /lib/python3/dis-packages/odoo/addons
-´´´
+```
 Luego eliminar de ahi el modulo en este caso moduloGFB con el comando:
-´´´sh
+```bash
 sudo rm -r moduloGFB
-´´´
+```
 Por ultimo ejecutar el comando
-  ´´´sh
+  ```bash
    sudo cp -r moduloGFB /lib/python3/dis-packages/odoo/addons
-   ´´´
+   ```
    este lo pega con los cambios que se hayan realizado para con los cambios se apliquen a nivel de servicio se ejecuta el comando
-   ´´´sh
+ ```bash
    sudo systemctl restart odoo
-   ´´´
+   ```
    luego en la interfaz grafica buscamos el modulo hacemos clic en los 3 puntos y le damos ha **informacion del modulo** si el codigo esta bien se llevara a cabo dicha actualizacion
 
 ## Problemas enfrentados
